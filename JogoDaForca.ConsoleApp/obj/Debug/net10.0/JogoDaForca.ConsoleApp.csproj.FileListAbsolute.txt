@@ -1,0 +1,15 @@
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\bin\Debug\net10.0\JogoDaForca.ConsoleApp.exe
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\bin\Debug\net10.0\JogoDaForca.ConsoleApp.deps.json
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\bin\Debug\net10.0\JogoDaForca.ConsoleApp.runtimeconfig.json
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\bin\Debug\net10.0\JogoDaForca.ConsoleApp.dll
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\bin\Debug\net10.0\JogoDaForca.ConsoleApp.pdb
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.AssemblyInfoInputs.cache
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.AssemblyInfo.cs
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.csproj.CoreCompileInputs.cache
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.sourcelink.json
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.dll
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\refint\JogoDaForca.ConsoleApp.dll
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.pdb
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\JogoDaForca.ConsoleApp.genruntimeconfig.cache
+C:\AcademiaDoProgramador\c#\JogoDaForca\JogoDaForca.ConsoleApp\obj\Debug\net10.0\ref\JogoDaForca.ConsoleApp.dll
