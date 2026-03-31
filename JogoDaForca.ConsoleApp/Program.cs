@@ -6,54 +6,112 @@
 
 */
 
+bool desejaContinuar = true;
 
-Console.WriteLine("-----------------");
-Console.WriteLine("Jogo Da Forca");
-Console.WriteLine("-----------------");
-Console.WriteLine();
-Console.WriteLine();
-
-char[] palavras = new char[7];
-string palavraAleatoria = "ABACATE";
-
-for (int i = 0; i < palavras.Length; i++)
+while (desejaContinuar)
 {
-    palavras[i] = '-';
+    Console.WriteLine("-----------------");
+    Console.WriteLine("Jogo Da Forca");
+    Console.WriteLine("-----------------");
+    Console.WriteLine();
+    Console.WriteLine();
 
-}
-
-while (true)
-{
-
-    Console.WriteLine("|------------------");
-    Console.WriteLine("|                |");
-    Console.WriteLine("|                |");
-    Console.WriteLine("|                |");
-    Console.WriteLine("|");
-    Console.WriteLine("|");
-    Console.WriteLine("|");
-    Console.WriteLine("|");
-    Console.WriteLine("|----------");
-
+    char[] palavras = new char[7];
+    string palavraAleatoria = "ABACATE";
     //         o
     //        /X\
     //        / \
-    Console.Write("                    " + string.Join("", palavras));
-    Console.Write("\nDigite uma letra: ");
-    char letra = char.Parse(Console.ReadLine());
-    Console.Clear();
+    string cabeca = "|                 ";
+    string torso = "|                 ";
+    string pernas = "|                 ";
+    int tentativasErradas = 0;
 
-    for (int i = 0; i < palavraAleatoria.Length; i++)
+
+
+    for (int i = 0; i < palavras.Length; i++)
     {
-        if (palavraAleatoria[i] == letra)
+        palavras[i] = '-';
+
+    }
+
+    bool forca = true;
+    while (forca)
+    {
+
+
+        Console.WriteLine("|------------------");
+        Console.WriteLine("|                 |");
+        Console.WriteLine("|                 |");
+        Console.WriteLine(cabeca);
+        Console.WriteLine(torso);
+        Console.WriteLine(pernas);
+        Console.WriteLine("|");
+        Console.WriteLine("|");
+        Console.WriteLine("|----------");
+        Console.WriteLine($"Você Errou {tentativasErradas} vezes");
+
+
+        Console.Write("                    " + string.Join("", palavras));
+        Console.Write("\nDigite uma letra: ");
+        char letra = char.Parse(Console.ReadLine());
+        Console.Clear();
+
+
+        bool diferenteDeTodos = false;
+        for (int i = 0; i < palavraAleatoria.Length; i++)
         {
-            palavras[i] = palavraAleatoria[i];
+            if (palavraAleatoria[i] == letra)
+            {
+                palavras[i] = palavraAleatoria[i];
+                diferenteDeTodos = true;
+            }
+
+        }
+
+        if (!diferenteDeTodos)
+        {
+            tentativasErradas++;
+            if (tentativasErradas == 1)
+            {
+                cabeca = "|                 O";
+            }
+            else if (tentativasErradas == 2)
+            {
+                torso = "|                /X";
+            }
+            else if (tentativasErradas == 3)
+            {
+                torso = @"|                /X\";
+            }
+            else if (tentativasErradas == 4)
+            {
+                pernas = "|                /";
+            }
+            else
+            {
+                pernas = @"|                / \";
+                Console.WriteLine("Você perdeu pressione enter para tentar novamente...");
+                Console.ReadLine();
+                forca = false;
+            }
+
         }
 
     }
 
-
+    Console.WriteLine("-----------------");
+    Console.WriteLine("Deseja Continuar? (S/N)");
+    string continua = Console.ReadLine().ToUpper();
+    if (continua == "S")
+    {
+        Console.WriteLine("Perfeito, vamos lá!");
+    }
+    else
+    {
+        Console.WriteLine("Você parou por aqui!");
+        Console.ReadLine();
+        desejaContinuar = false;
+    }
 }
-
 
 
