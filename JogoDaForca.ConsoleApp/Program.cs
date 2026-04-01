@@ -6,10 +6,49 @@
 
 */
 
+
+using System.Security.Cryptography;
+
+string[] palavrasCompletas = [
+                "ABACATE",
+                "ABACAXI",
+                "ACEROLA",
+                "ACAI",
+                "ARACA",
+                "BACABA",
+                "BACURI",
+                "BANANA",
+                "CAJA",
+                "CAJU",
+                "CARAMBOLA",
+                "CUPUACU",
+                "GRAVIOLA",
+                "GOIABA",
+                "JABUTICABA",
+                "JENIPAPO",
+                "MACA",
+                "MANGABA",
+                "MANGA",
+                "MARACUJA",
+                "MURICI",
+                "PEQUI",
+                "PITANGA",
+                "PITAYA",
+                "SAPOTI",
+                "TANGERINA",
+                "UMBU",
+                "UVA",
+                "UVAIA"
+            ];
+
+
+
 bool desejaContinuar = true;
 
 while (desejaContinuar)
 {
+
+    int indiceAleatorio = RandomNumberGenerator.GetInt32(palavrasCompletas.Length);
     Console.WriteLine("-----------------");
     Console.WriteLine("Jogo Da Forca");
     Console.WriteLine("-----------------");
@@ -17,10 +56,8 @@ while (desejaContinuar)
     Console.WriteLine();
 
     char[] palavras = new char[7];
-    string palavraAleatoria = "ABACATE";
-    //         o
-    //        /X\
-    //        / \
+    string palavraAleatoria = palavrasCompletas[indiceAleatorio];
+
     string cabeca = "|                 ";
     string torso = "|                 ";
     string pernas = "|                 ";
@@ -40,7 +77,7 @@ while (desejaContinuar)
 
 
         Console.WriteLine("|------------------");
-        Console.WriteLine("|                 |");
+        Console.WriteLine("|/                |");
         Console.WriteLine("|                 |");
         Console.WriteLine(cabeca);
         Console.WriteLine(torso);
@@ -53,8 +90,8 @@ while (desejaContinuar)
 
         Console.Write("                    " + string.Join("", palavras));
         Console.Write("\nDigite uma letra: ");
-        char letra = char.Parse(Console.ReadLine());
-        Console.Clear();
+
+        //Console.Clear();
 
 
         bool diferenteDeTodos = false;
@@ -65,7 +102,6 @@ while (desejaContinuar)
                 palavras[i] = palavraAleatoria[i];
                 diferenteDeTodos = true;
             }
-
         }
 
         if (!diferenteDeTodos)
@@ -94,9 +130,15 @@ while (desejaContinuar)
                 Console.ReadLine();
                 forca = false;
             }
-
         }
 
+        string palavraCompleta = string.Join("", palavras);
+
+        if (palavraAleatoria == palavraCompleta)
+        {
+            Console.WriteLine("Voce Ganhou");
+            forca = false;
+        }
     }
 
     Console.WriteLine("-----------------");
@@ -113,5 +155,3 @@ while (desejaContinuar)
         desejaContinuar = false;
     }
 }
-
-
